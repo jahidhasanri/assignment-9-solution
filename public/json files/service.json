@@ -1,0 +1,101 @@
+[
+    {
+      "id": 1,
+      "image": "https://i.ibb.co/example1.jpg",
+      "serviceName": "Career Counseling Sessions",
+      "category": "Online",
+      "description": "Personalized career guidance to help you find the right path.",
+      "pricing": "$50",
+      "duration": "05-12-24 5:00 PM - 6:00 PM",
+      "counselor": "John Doe",
+      "rating": 4.8,
+      "learnMoreLink": "https://example.com/career-counseling",
+      "additionalInfo": {
+        "location": "Zoom",
+        "contactEmail": "john.doe@example.com"
+      }
+    },
+    {
+      "id": 2,
+      "image": "https://i.ibb.co/example2.jpg",
+      "serviceName": "Resume Review",
+      "category": "Offline",
+      "description": "In-depth review of your resume to make it stand out.",
+      "pricing": "$30",
+      "duration": "06-12-24 3:00 PM - 4:00 PM",
+      "counselor": "Jane Smith",
+      "rating": 4.7,
+      "learnMoreLink": "https://example.com/resume-review",
+      "additionalInfo": {
+        "location": "Career Office, 3rd Floor, Downtown Building",
+        "contactEmail": "jane.smith@example.com"
+      }
+    },
+    {
+      "id": 3,
+      "image": "https://i.ibb.co/example3.jpg",
+      "serviceName": "Interview Preparation",
+      "category": "Group",
+      "description": "Group sessions focused on acing your next job interview.",
+      "pricing": "$40",
+      "duration": "10-12-24 2:00 PM - 4:00 PM",
+      "counselor": "Alex Johnson",
+      "rating": 4.9,
+      "learnMoreLink": "https://example.com/interview-prep",
+      "additionalInfo": {
+        "location": "Conference Hall, Central Library",
+        "maxParticipants": 15,
+        "contactEmail": "alex.johnson@example.com"
+      }
+    },
+    {
+      "id": 4,
+      "image": "https://i.ibb.co/example4.jpg",
+      "serviceName": "LinkedIn Profile Optimization",
+      "category": "Online",
+      "description": "Optimize your LinkedIn profile for better professional visibility.",
+      "pricing": "$35",
+      "duration": "12-12-24 11:00 AM - 12:00 PM",
+      "counselor": "Emily Clark",
+      "rating": 4.6,
+      "learnMoreLink": "https://example.com/linkedin-optimization",
+      "additionalInfo": {
+        "location": "Google Meet",
+        "contactEmail": "emily.clark@example.com"
+      }
+    },
+    {
+      "id": 5,
+      "image": "https://i.ibb.co/example5.jpg",
+      "serviceName": "Public Speaking Workshop",
+      "category": "Group",
+      "description": "Develop confidence and skills for public speaking in professional settings.",
+      "pricing": "$45",
+      "duration": "15-12-24 1:00 PM - 3:00 PM",
+      "counselor": "Michael Brown",
+      "rating": 4.7,
+      "learnMoreLink": "https://example.com/public-speaking",
+      "additionalInfo": {
+        "location": "Training Center, Room 204",
+        "maxParticipants": 20,
+        "contactEmail": "michael.brown@example.com"
+      }
+    },
+    {
+      "id": 6,
+      "image": "https://i.ibb.co/example6.jpg",
+      "serviceName": "Job Search Strategy Session",
+      "category": "Online",
+      "description": "Strategies for effective job searching, tailored to your career goals.",
+      "pricing": "$55",
+      "duration": "18-12-24 4:00 PM - 5:30 PM",
+      "counselor": "Sarah Lee",
+      "rating": 4.9,
+      "learnMoreLink": "https://example.com/job-search-strategy",
+      "additionalInfo": {
+        "location": "Microsoft Teams",
+        "contactEmail": "sarah.lee@example.com"
+      }
+    }
+  ]
+  
