@@ -3,8 +3,9 @@ import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../authLayout/AuthLayout';
 
 const Navbar = () => {
- const {name}=useContext(AuthContext)
- console.log(name);
+ const {user,handleSingOut}=useContext(AuthContext)
+//  console.log();
+//  console.log(name);
   const [isScrolled, setIsScrolled] = useState(false);
 
   // Add scroll event listener
@@ -49,7 +50,15 @@ const Navbar = () => {
         </div>
       </div>
       <div className='text-center mt-4'>
-        <Link to='/login' className="btn btn-active btn-neutral">Login</Link>
+        {
+          user? <div>
+          <p>{user?.email}</p>
+          <Link to='/login' onClick={handleSingOut} className="btn btn-active btn-neutral">log out</Link>
+        </div>
+          :
+         
+           <Link  to='/login' className="btn btn-active btn-neutral">Login</Link>
+        }
       </div>
     </div>
   );

@@ -4,6 +4,9 @@ import ErrorPage from "../pages/ErrorPage";
 import Profile from "../pages/Profile";
 import CardDetails from "../pages/CardDetails";
 import Login from "../pages/Login";
+import Register from "../pages/Register";
+import PrivateRouter from "./PrivateRouter";
+
 
 const router= createBrowserRouter([
     {
@@ -22,12 +25,17 @@ const router= createBrowserRouter([
     },
     {
         path:'/carddetails/:id',
-        element:<CardDetails></CardDetails>,
+        element:<PrivateRouter><CardDetails></CardDetails></PrivateRouter>,
+        // element:<CardDetails></CardDetails>,
         loader:()=>fetch('/json files/service.json')
     },
     {
         path:'/login',
         element:<Login></Login>
+    },
+    {
+        path:'/register',
+        element:<Register></Register>
     }
 
 ])
