@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useState, useEffect, useContext } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../authLayout/AuthLayout';
 
 const Navbar = () => {
-  // State to track if the Navbar background should change
+ const {name}=useContext(AuthContext)
+ console.log(name);
   const [isScrolled, setIsScrolled] = useState(false);
 
   // Add scroll event listener
@@ -47,7 +49,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className='text-center mt-4'>
-        <button className="btn btn-active btn-neutral">Login</button>
+        <Link to='/login' className="btn btn-active btn-neutral">Login</Link>
       </div>
     </div>
   );
