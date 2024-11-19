@@ -52,7 +52,7 @@ const Navbar = () => {
       <div className='text-center mt-4'>
         {
           user? <div>
-          <p>{user?.email}</p>
+          <p>{user.email}</p>
           <Link to='/login' onClick={handleSingOut} className="btn btn-active btn-neutral">log out</Link>
         </div>
           :
