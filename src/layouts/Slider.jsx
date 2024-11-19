@@ -1,38 +1,48 @@
 import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const Slider = () => {
     return (
-        <div class="carousel h-[200px] w-full mt-56 lg:h-[700px] lg:w-[1500px] mx-auto lg:mt-40 mb-12">
- 
-        <div id="slide1" class="carousel-item relative w-full">
-          <img className='lg:h-[700px] w-[1300px] mx-auto mt-12 mb-12' src="https://i.ibb.co.com/wBq9pMb/image-6.png" alt="Slide 1" class="w-full" />
-         
-          <div class="absolute flex justify-between transform -translate-y-1/2 left-0 right-0 top-1/2">
-            <a href="#slide3" class="btn btn-circle ">❮</a>
-            <a href="#slide2" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-      
-        
-        <div id="slide2" class="carousel-item relative w-full">
-          <img className='lg: h-[700px] w-[1300px] mx-auto mt-12 mb-12' src="https://i.ibb.co.com/pK2Xt6P/Resume-Review.png" alt="Slide 2" class="w-full" />
-        
-          <div class="absolute flex justify-between transform -translate-y-1/2 left-0 right-0 top-1/2">
-            <a href="#slide1" class="btn btn-circle">❮</a>
-            <a href="#slide3" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-      
-        
-        <div id="slide3" class="carousel-item relative w-full">
-          <img className='lg: h-[700px] w-[1300px] mx-auto mt-12 mb-12' src="https://i.ibb.co.com/Sxt8Xq2/4e30305d1be37f7f6ec3-808x-Full.webp" alt="Slide 3" class="w-full" />
-          
-          <div class="absolute flex justify-between transform -translate-y-1/2 left-0 right-0 top-1/2">
-            <a href="#slide2" class="btn btn-circle">❮</a>
-            <a href="#slide1" class="btn btn-circle">❯</a>
-          </div>
-        </div>
-                          </div>
+        <Swiper 
+            className='lg:w-[1400px] h-[700px] mx-auto border'
+            modules={[Navigation, Pagination, Scrollbar, A11y]}
+            spaceBetween={50}
+            slidesPerView={1}
+            navigation
+            pagination={{ clickable: true }}
+        >
+            <SwiperSlide>
+                <div className='w-full h-full'>
+                    <img 
+                        className='w-full h-full object-cover' 
+                        src="https://i.ibb.co.com/FwnTCgv/Career-Counselling-2.png" 
+                        alt="Slide 1" 
+                    />
+                </div>
+            </SwiperSlide>
+            <SwiperSlide>
+                <div className='w-full h-full'>
+                    <img 
+                        className='w-full h-full object-cover' 
+                        src="https://i.ibb.co/pK2Xt6P/Resume-Review.png" 
+                        alt="Slide 2" 
+                    />
+                </div>
+            </SwiperSlide>
+            <SwiperSlide>
+                <div className='w-full h-full'>
+                    <img 
+                        className='w-full h-full object-cover' 
+                        src="https://i.ibb.co/CbJTLKB/5-professional-challenges-faced-by-career-counsellors-blog.png" 
+                        alt="Slide 3" 
+                    />
+                </div>
+            </SwiperSlide>
+        </Swiper>
     );
 };
 

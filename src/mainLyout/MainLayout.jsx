@@ -13,7 +13,7 @@ const MainLayout = () => {
                 <Navbar></Navbar>
             </header>
             <main className='min-h-[calc(100vh-405px)]'>
-                <section className='lg:h-[700px] lg:w-[1500px] mx-auto mb-16'>
+                <section className='lg: mt-40 mx-auto mb-16'>
                   <Slider></Slider>
                 </section>
                 <section className='lg:my-40 mx-auto '>
