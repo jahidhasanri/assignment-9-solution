@@ -6,6 +6,7 @@ import CardDetails from "../pages/CardDetails";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import PrivateRouter from "./PrivateRouter";
+import ForgetPassword from "../pages/ForgetPassword ";
 
 
 const router= createBrowserRouter([
@@ -21,7 +22,7 @@ const router= createBrowserRouter([
     },
     {
         path:'/profile',
-        element:<Profile></Profile>
+        element:<PrivateRouter><Profile></Profile></PrivateRouter>
     },
     {
         path:'/carddetails/:id',
@@ -36,7 +37,12 @@ const router= createBrowserRouter([
     {
         path:'/register',
         element:<Register></Register>
+    },
+    {
+        path:'/forgetpassword',
+        element:<ForgetPassword></ForgetPassword>
     }
+
 
 ])
 export default router

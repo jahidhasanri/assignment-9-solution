@@ -3,6 +3,8 @@ import Navbar from '../layouts/Navbar';
 import Footer from '../layouts/Footer';
 import Slider from '../layouts/Slider';
 import Services from '../layouts/Services';
+import MeetoutExpert from '../layouts/MeetoutExpert';
+import Testimonials from '../layouts/Testimonials';
 
 const MainLayout = () => {
     return (
@@ -17,6 +19,14 @@ const MainLayout = () => {
                 <section className='lg:my-40 mx-auto '>
                     <Services></Services>
                 </section>
+
+                <section>
+                    <MeetoutExpert></MeetoutExpert>
+                </section>
+                <section>
+                    <Testimonials></Testimonials>
+                </section>
+
             </main>
             <footer>
                 <Footer></Footer>
