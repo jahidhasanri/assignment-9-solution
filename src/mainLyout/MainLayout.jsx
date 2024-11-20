@@ -5,10 +5,14 @@ import Slider from '../layouts/Slider';
 import Services from '../layouts/Services';
 import MeetoutExpert from '../layouts/MeetoutExpert';
 import Testimonials from '../layouts/Testimonials';
+import { Helmet } from 'react-helmet-async';
 
 const MainLayout = () => {
     return (
         <div className='w-11/12 mx-auto'>
+            <Helmet>
+                <title>home</title>
+            </Helmet>
             <header className='pt-2'>
                 <Navbar></Navbar>
             </header>

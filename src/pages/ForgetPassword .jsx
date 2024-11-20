@@ -6,6 +6,7 @@ import { sendPasswordResetEmail } from 'firebase/auth';
 import { useNavigate, useLocation } from 'react-router-dom';
 import auth from '../firebase.config/firebase.config';
 import Navbar from '../layouts/Navbar';
+import { Helmet } from 'react-helmet-async';
 
 const ForgetPassword = () => {
   const [email, setEmail] = useState('');
@@ -46,6 +47,7 @@ const ForgetPassword = () => {
 
   return (
     <div>
+      <Helmet><title>forgetpassword</title></Helmet>
       <ToastContainer /> 
       <div className='w-11/12 mx-auto'>
         <Navbar></Navbar>

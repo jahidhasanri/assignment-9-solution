@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navbar from '../layouts/Navbar';
 import { Link, useLoaderData, useParams } from 'react-router-dom';
 import ReactStars from 'react-rating-stars-component'; // Import the rating component
+import { Helmet } from 'react-helmet-async';
 
 const CardDetails = () => {
   const user = useLoaderData();
@@ -26,6 +27,7 @@ const CardDetails = () => {
 
   return (
     <div className='w-11/12 mx-auto'>
+      <Helmet><title>card details</title></Helmet>
       <Navbar></Navbar>
       <div className="card bg-base-100 w-[1000px] shadow-xl lg:mt-52 mx-auto">
         <figure className="px-10 pt-10">
@@ -57,7 +59,7 @@ const CardDetails = () => {
           <p className="text-gray-700 mb-2 text-xl font-medium">Contact Email: {cards.additionalInfo.contactEmail}</p>
           
           <p className="text-gray-600 mb-6 text-xl mt-4">Description: <span className='text-neutral'>{cards.description}</span></p>
-
+            <button className='btn btn-secondary'>Appointment</button>
           {/* Comment/Feedback Section */}
           <div className="mt-10">
             <h3 className="text-2xl font-semibold mb-4">Leave a Comment/Feedback:</h3>

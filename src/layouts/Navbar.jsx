@@ -46,7 +46,7 @@ const Navbar = () => {
   >
     <ToastContainer 
       position="top-center"/>
-    <div className='lg:ml-[-450px]'>
+    <div className='lg:ml-[-350px]'>
       <h1 className='text-2xl font-bold text-center lg:font-extrabold lg:text-4xl'>
         Career Counseling
       </h1>
@@ -60,6 +60,11 @@ const Navbar = () => {
       <div>
         <NavLink to='/profile' className='text-xl font-semibold'>
           My Profile
+        </NavLink>
+      </div>
+      <div>
+        <NavLink to='/appoinment' className='text-xl font-semibold'>
+        Appointment History
         </NavLink>
       </div>
     </div>

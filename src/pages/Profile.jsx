@@ -3,6 +3,8 @@ import { AuthContext } from '../authLayout/AuthLayout';
 import { getAuth, updateProfile } from 'firebase/auth';
 import { toast } from 'react-toastify'; 
 import Navbar from '../layouts/Navbar';
+import Footer from '../layouts/Footer';
+import { Helmet } from 'react-helmet-async';
 
 const Profile = () => {
   const { user, setUser } = useContext(AuthContext);
@@ -41,8 +43,14 @@ const Profile = () => {
   };
 
   return (
-    <div className="min-h-screen bg-base-200 flex items-center justify-center">
+    <div>
+      <Helmet>
+        <title>profile</title>
+      </Helmet>
+      <div className='w-11/12 mx-auto'>
       <Navbar />
+      </div>
+    <div className="min-h-screen bg-base-200 flex items-center justify-center mb-2">
       <div className="bg-white shadow-md rounded p-6 max-w-lg w-full">
         <h2 className="text-3xl font-bold mb-6 text-center">My Profile</h2>
         <div className="mb-4">
@@ -96,6 +104,11 @@ const Profile = () => {
             Edit Profile
           </button>
         )}
+      </div>
+      
+    </div>
+    <div className='w-11/12 mx-auto'>
+    <Footer></Footer>
       </div>
     </div>
   );

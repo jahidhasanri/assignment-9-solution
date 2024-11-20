@@ -4,6 +4,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../authLayout/AuthLayout';
 import { IoEyeSharp } from 'react-icons/io5';
 import { HiMiniEyeSlash } from 'react-icons/hi2';
+import Footer from '../layouts/Footer';
+import { Helmet } from 'react-helmet-async';
 
 const Register = () => {
     const {handelRegistWemail,setUser}= useContext(AuthContext)
@@ -35,6 +37,7 @@ const Register = () => {
 
     return (
         <div>
+          <Helmet><title>register</title></Helmet>
             <div className='w-11/12 mx-auto'>
             <Navbar></Navbar>
             </div>
@@ -81,7 +84,8 @@ const Register = () => {
     </div>
   </div>
 </div>
-
+  
+      <div className='w-11/12 mx-auto'><Footer></Footer></div>
 
         </div>
     );

@@ -24,6 +24,10 @@ const AuthLayout = ({children}) => {
         return signOut(auth);
     }
 
+    // const handellgoinWithGoogle = ()=>{
+    //     const 
+    // }
+
 
     
     const userInfo = {

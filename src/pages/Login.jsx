@@ -4,6 +4,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from '../authLayout/AuthLayout';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Navbar from '../layouts/Navbar';
+import Footer from '../layouts/Footer';
+import { Helmet } from 'react-helmet-async';
 
 const Login = () => {
   const { handelLoginWemail, setUser } = useContext(AuthContext);
@@ -33,6 +35,7 @@ const Login = () => {
 
   return (
     <div>
+      <Helmet><title>login</title></Helmet>
       <div className='w-11/12 mx-auto'>
         <ToastContainer position="top-center" autoClose={3000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
         <Navbar />
@@ -67,6 +70,7 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <Footer></Footer>
     </div>
   );
 };
