@@ -1,4 +1,6 @@
 import React, { useContext } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from '../authLayout/AuthLayout';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Navbar from '../layouts/Navbar';
@@ -16,12 +18,14 @@ const Login = () => {
     handelLoginWemail(email, password)
       .then((result) => {
         console.log(result.user);
-        setUser(result.user); // Use result.user to get the correct user data
-        const from = location.state?.from?.pathname || '/'; // Previous route or homepage
+        toast.success('Login successful!'); // Success toast
+        setUser(result.user);
+        const from = location.state?.from?.pathname || '/';
         navigate(from, { replace: true });
       })
       .catch((error) => {
         console.log(error);
+        toast.error(`Login failed: ${error.message}`); // Error toast
       });
 
     console.log(email, password);
@@ -30,7 +34,8 @@ const Login = () => {
   return (
     <div>
       <div className='w-11/12 mx-auto'>
-        <Navbar></Navbar>
+        <ToastContainer position="top-center" autoClose={3000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
+        <Navbar />
       </div>
       <div className="hero bg-base-200 min-h-screen mt-14">
         <div className="hero-content flex-col ">
@@ -51,7 +56,7 @@ const Login = () => {
                 </label>
                 <input type="password" name='password' placeholder="password" className="input input-bordered" required />
                 <label className="label">
-                  <Link to='/forgetpassword' href="#" className="label-text-alt link link-hover">Forgot password?</Link>
+                  <Link to='/forgetpassword' className="label-text-alt link link-hover">Forgot password?</Link>
                 </label>
               </div>
               <div className="form-control mt-6">

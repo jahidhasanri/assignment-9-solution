@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import Navbar from '../layouts/Navbar';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../authLayout/AuthLayout';
 import { IoEyeSharp } from 'react-icons/io5';
 import { HiMiniEyeSlash } from 'react-icons/hi2';
@@ -8,6 +8,7 @@ import { HiMiniEyeSlash } from 'react-icons/hi2';
 const Register = () => {
     const {handelRegistWemail,setUser}= useContext(AuthContext)
     const [showPassword,SetShowPassword]=useState(true)
+    const navigate = useNavigate();
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
     const handleRegister= (e)=>{
         e.preventDefault();
@@ -19,6 +20,7 @@ const Register = () => {
         .then((result)=>{
             setUser(result.user)
             console.log(result.user);
+            navigate('/')
         })
         .catch((error)=>{
             console.log(error);
@@ -69,11 +71,10 @@ const Register = () => {
           <input type={showPassword?'text':"password"} name='password' placeholder="password" className="input input-bordered" required />
           <button onClick={()=>SetShowPassword(!showPassword)} className='lg:ml-[215px] mt-[55px] absolute'>{showPassword?<HiMiniEyeSlash /> :<IoEyeSharp />}</button>
           <label className="label">
-            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
           </label>
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Login</button>
+          <button className="btn btn-primary">Register</button>
         </div>
         <p>Have a account? please <Link to='/login' className='text-red-500 border-b-2' >Login</Link> </p>
       </form>
