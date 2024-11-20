@@ -8,7 +8,7 @@ import 'swiper/css/pagination';
 const Slider = () => {
     return (
         <Swiper 
-            className='lg:w-[1400px] h-[700px] mx-auto border'
+            className='w-[300px] h-[400px] pt-[100px] md:w-11/12  lg:w-[1400px] lg:h-[700px] mx-auto border'
             modules={[Navigation, Pagination, Scrollbar, A11y]}
             spaceBetween={50}
             slidesPerView={1}
@@ -34,9 +34,9 @@ const Slider = () => {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className='w-full h-full'>
+                <div className='w-full h-[400px]  lg:h-full'>
                     <img 
-                        className='w-full h-full object-cover' 
+                        className='w-full h-[400px] bg-cover lg:object-cover lg:h-full ' 
                         src="https://i.ibb.co/CbJTLKB/5-professional-challenges-faced-by-career-counsellors-blog.png" 
                         alt="Slide 3" 
                     />

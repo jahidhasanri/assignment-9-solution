@@ -13,11 +13,11 @@ const MainLayout = () => {
             <Helmet>
                 <title>home</title>
             </Helmet>
-            <header className='pt-2'>
+            <header className='mb-10 pt-2'>
                 <Navbar></Navbar>
             </header>
             <main className='min-h-[calc(100vh-405px)]'>
-                <section className='lg: mt-40 mx-auto mb-16'>
+                <section className='pt-56 lg:mt-40 mx-auto lg:pt-0 mb-16'>
                   <Slider></Slider>
                 </section>
                 <section className='lg:my-40 mx-auto '>

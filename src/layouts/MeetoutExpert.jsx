@@ -9,21 +9,21 @@ const MeetoutExpert = () => {
   }, []);
   return (
     <div className="mb-9 bg-slate-200 pb-28">
-      <h1 className="text-4xl font-extrabold text-center mb-4 lg:pt-32">
+      <h1 className="text-4xl font-extrabold text-center mb-4 pt-4 md:pt-10 lg:pt-32">
       Meet Our Experts
       </h1>
       <p className="text-gray-600 mb-10 text-center text-xl">
         Our skilled professionals are ready to assist you with their expertise.
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:ml-28">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:ml-28">
         {experts.map((expert, index) => (
           <div key={index} className="card bg-base-100 lg:w-96 shadow-xl">
             <figure className="px-10 pt-10">
               <img
                 src={expert.image}
                 alt="Expert"
-                className="rounded-xl object-cover lg:h-[230px] lg:w-[304px] block mx-auto"
+                className="rounded-xl object-cover h-[200px] w-[300px] lg:h-[230px] lg:w-[304px] block mx-auto"
               />
             </figure>
             <div className="p-6">

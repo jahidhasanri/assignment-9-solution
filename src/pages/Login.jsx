@@ -36,7 +36,7 @@ const Login = () => {
   return (
     <div>
       <Helmet><title>login</title></Helmet>
-      <div className='w-11/12 mx-auto'>
+      <div className='w-11/12 mx-auto pt-32 lg:pt-0'>
         <ToastContainer position="top-center" autoClose={3000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
         <Navbar />
       </div>

@@ -35,7 +35,7 @@ const Appoinment = () => {
             <Helmet><title>appoinment history</title></Helmet>
             <div className="w-11/12 mx-auto"><Navbar></Navbar></div>
 
-        <div className="container mx-auto p-4">
+        <div className="container mx-auto p-4 pt-72 lg:pt-0">
             <h1 className="text-2xl font-bold mb-4">Appointment History</h1>
             {appointments.length === 0 ? (
                 <p>No appointments found.</p>

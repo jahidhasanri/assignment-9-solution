@@ -8,7 +8,7 @@ const Testimonials = () => {
         Hear directly from those who have benefited from our career counseling services and achieved their goals.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-        <div className="testimonial-item bg-white p-8 rounded-lg shadow-xl transform transition-transform hover:scale-105 duration-300">
+        <div className="testimonial-item mb-3 bg-white p-8 rounded-lg shadow-xl transform transition-transform hover:scale-105 duration-300">
           <img
             src="https://i.ibb.co.com/tJ4Mx9p/67274-main.jpg"
             alt="Client Image"
@@ -21,7 +21,7 @@ const Testimonials = () => {
           <h4 className="text-xl font-semibold text-gray-800">Sarah Williams</h4>
           <p className="text-gray-500">Marketing Manager</p>
         </div>
-        <div className="testimonial-item bg-white p-8 rounded-lg shadow-xl transform transition-transform hover:scale-105 duration-300">
+        <div className="testimonial-item mb-3 bg-white p-8 rounded-lg shadow-xl transform transition-transform hover:scale-105 duration-300">
           <img
             src="https://i.ibb.co.com/Gs6GBJR/james-thompson.jpg"
             alt="Client Image"
@@ -34,7 +34,7 @@ const Testimonials = () => {
           <h4 className="text-xl font-semibold text-gray-800">James Thompson</h4>
           <p className="text-gray-500">Software Developer</p>
         </div>
-        <div className="testimonial-item bg-white p-8 rounded-lg shadow-xl transform transition-transform hover:scale-105 duration-300">
+        <div className="testimonial-item mb-3 bg-white p-8 rounded-lg shadow-xl transform transition-transform hover:scale-105 duration-300">
           <img
             src="https://i.ibb.co.com/jGXh52D/hq720.jpg"
             alt="Client Image"

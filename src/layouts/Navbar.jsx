@@ -40,7 +40,7 @@ const Navbar = () => {
 
   return (
     <div
-    className={`fixed w-full lg:w-11/12 top-0 z-50 lg:flex justify-between items-center pt-6 pb-8 px-4 transition-colors duration-300 ${
+    className={`fixed mt-1 md:mt-0 md: lg:ml-0  md: w-11/12 top-0 z-50 md:flex justify-between items-center pt-6 pb-8 px-4 transition-colors duration-300 ${
       isScrolled ? 'bg-gray-400 text-white' : 'bg-slate-200'
     }`}
   >
@@ -68,7 +68,7 @@ const Navbar = () => {
         </NavLink>
       </div>
     </div>
-      <div className="text-center mt-4 lg:mr-[50px]">
+      <div className="text-center mt-4 ml-28 lg:ml-0  lg:mr-[50px]">
         {user ? (
           <div className="relative flex items-center gap-2 group">
             {/* User Image */}

@@ -38,7 +38,7 @@ const Register = () => {
     return (
         <div>
           <Helmet><title>register</title></Helmet>
-            <div className='w-11/12 mx-auto'>
+            <div className='w-11/12 mx-auto  pt-32 lg:pt-0'>
             <Navbar></Navbar>
             </div>
            
@@ -72,7 +72,7 @@ const Register = () => {
             <span className="label-text">Password</span>
           </label>
           <input type={showPassword?'text':"password"} name='password' placeholder="password" className="input input-bordered" required />
-          <button onClick={()=>SetShowPassword(!showPassword)} className='lg:ml-[215px] mt-[55px] absolute'>{showPassword?<HiMiniEyeSlash /> :<IoEyeSharp />}</button>
+          <button onClick={()=>SetShowPassword(!showPassword)} className='ml-[215px] mt-[55px] absolute'>{showPassword?<HiMiniEyeSlash /> :<IoEyeSharp />}</button>
           <label className="label">
           </label>
         </div>
