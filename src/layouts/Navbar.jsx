@@ -40,39 +40,49 @@ const Navbar = () => {
 
   return (
     <div
-      className={`fixed w-full lg:w-11/12 top-0 z-50 lg:flex justify-between items-center pt-6 pb-6 px-4 transition-colors duration-300 ${
-        isScrolled ? 'bg-gray-400 text-white' : 'bg-slate-200'
-      }`}
-    >
-      <ToastContainer 
-        position="top-center"/>
+    className={`fixed w-full lg:w-11/12 top-0 z-50 lg:flex justify-between items-center pt-6 pb-8 px-4 transition-colors duration-300 ${
+      isScrolled ? 'bg-gray-400 text-white' : 'bg-slate-200'
+    }`}
+  >
+    <ToastContainer 
+      position="top-center"/>
+    <div className='lg:ml-[-450px]'>
+      <h1 className='text-2xl font-bold text-center lg:font-extrabold lg:text-4xl'>
+        Career Counseling
+      </h1>
+    </div>
+    <div className='text-center lg:flex gap-10'>
       <div>
-        <h1 className='text-2xl font-bold text-center lg:font-extrabold lg:text-4xl'>
-          Career Counseling
-        </h1>
+        <NavLink to='/' className='text-xl font-semibold'>
+          Home
+        </NavLink>
       </div>
-      <div className='text-center lg:flex gap-10'>
-        <div>
-          <NavLink to='/' className='text-xl font-semibold'>
-            Home
-          </NavLink>
-        </div>
-        <div>
-          <NavLink to='/profile' className='text-xl font-semibold'>
-            My Profile
-          </NavLink>
-        </div>
+      <div>
+        <NavLink to='/profile' className='text-xl font-semibold'>
+          My Profile
+        </NavLink>
       </div>
-      <div className='text-center mt-4'>
+    </div>
+      <div className="text-center mt-4 lg:mr-[50px]">
         {user ? (
-          <div>
-            <p>{user.email}</p>
+          <div className="relative flex items-center gap-2 group">
+            {/* User Image */}
+            <img
+              src={user.photoURL || 'https://via.placeholder.com/50'}
+              alt="User"
+              className="w-12 h-12 rounded-full cursor-pointer"
+            />
+            {/* Always show logout button */}
             <button onClick={handleLogout} className="btn btn-active btn-neutral">
               Log out
             </button>
+            {/* Show user name only on hover */}
+            <div className="user-name-tooltip hidden group-hover:block absolute bg-white text-black rounded p-2 mt-20">
+              <p className="text-sm">{user.displayName || 'User'}</p>
+            </div>
           </div>
         ) : (
-          <Link to='/login' className="btn btn-active btn-neutral">
+          <Link to="/login" className="btn btn-active btn-neutral">
             Login
           </Link>
         )}
