@@ -9,7 +9,7 @@ import { Helmet } from 'react-helmet-async';
 
 const MainLayout = () => {
     return (
-        <div className='w-11/12 mx-auto'>
+        <div className='w-full mx-auto'>
             <Helmet>
                 <title>home</title>
             </Helmet>

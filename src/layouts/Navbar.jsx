@@ -8,7 +8,7 @@ import './navbar.css';
 const Navbar = () => {
   const { user, handleSingOut, setUser } = useContext(AuthContext);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isHovered, setIsHovered] = useState(false); // Track hover state
+  const [isHovered, setIsHovered] = useState(false);
   const navigate = useNavigate();
 
   const handleLogout = (e) => {
@@ -17,7 +17,7 @@ const Navbar = () => {
       .then(() => {
         setUser(null);
         toast.success('Logout successful!');
-        navigate('/login');
+        setTimeout(() => navigate('/login'), 2000); 
       })
       .catch((error) => {
         console.error(error);
@@ -39,17 +39,18 @@ const Navbar = () => {
 
   return (
     <div
-      className={`fixed mt-1 md:mt-0 md: lg:ml-0 md:w-11/12 top-0 z-50 md:flex justify-between items-center pt-6 pb-10 px-4 transition-colors duration-300 ${
+      className={`fixed justify-between w-full  items-center mt-1 md:w-full md:mt-0 lg:ml-0 md:w-11/12 top-0 z-50 md:flex  pt-6 pb-10 lg:px-4 transition-colors duration-300 ${
         isScrolled ? 'bg-gray-400 text-white' : 'bg-slate-200'
       }`}
     >
-      <ToastContainer position="top-center" />
-      <div className="lg:ml-[-350px]">
-        <h1 className="text-2xl font-bold text-center lg:font-extrabold lg:text-4xl">
+      <div className="">
+      
+        <h1 className="text-2xl font-bold text-center lg:ml-[50px] lg:font-extrabold lg:text-4xl">
           Career Counseling
         </h1>
       </div>
-      <div className="text-center lg:flex gap-10">
+      <div className="text-center md:ml-[10px] lg:ml-[250px]  lg:flex gap-10">
+     
         <div>
           <NavLink to="/" className="text-xl font-semibold">
             Home
@@ -66,12 +67,13 @@ const Navbar = () => {
           </NavLink>
         </div>
       </div>
-      <div className="text-center mt-4 ml-28 lg:ml-0 lg:mr-[50px]">
+      <div className="text-center mt-4 ml-[110px] lg:ml-[350px]  ">
+      
         {user && user?.email ? (
           <div
             className="relative flex items-center gap-3"
-            onMouseEnter={() => setIsHovered(true)} // Set hover state on enter
-            onMouseLeave={() => setIsHovered(false)} // Remove hover state on leave
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
           >
             <img
               className="w-12 h-12 rounded-full cursor-pointer"
@@ -93,6 +95,19 @@ const Navbar = () => {
           </Link>
         )}
       </div>
+      {/* ToastContainer */}
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </div>
   );
 };

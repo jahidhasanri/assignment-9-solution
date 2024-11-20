@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from '../authLayout/AuthLayout';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Navbar from '../layouts/Navbar';
 import Footer from '../layouts/Footer';
 import { Helmet } from 'react-helmet-async';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
   const { handelLoginWemail, setUser } = useContext(AuthContext);
@@ -19,30 +19,37 @@ const Login = () => {
 
     handelLoginWemail(email, password)
       .then((result) => {
-        console.log(result.user);
-        toast.success('Login successful!');
-        setUser(result.user);
-        const from = location.state?.from?.pathname || '/';
-        navigate(from, { replace: true });
+        console.log('Login Result:', result); 
+        if (result?.user) {
+          toast.success('Login successful!');
+          setUser(result.user);
+          setTimeout(() => {
+            const from = location.state?.from?.pathname || '/';
+            navigate(from, { replace: true });
+          }, 1000);
+        } else {
+          toast.error('Login failed: User not found!');
+        }
       })
       .catch((error) => {
-        console.log(error);
+        console.log('Error:', error);
         toast.error(`Login failed: ${error.message}`);
       });
 
-    console.log(email, password);
+    console.log('Email:', email, 'Password:', password); 
   };
 
   return (
     <div>
-      <Helmet><title>login</title></Helmet>
-      <div className='w-11/12 mx-auto pt-32 lg:pt-0'>
-        <ToastContainer position="top-center" autoClose={3000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
+      <Helmet>
+        <title>Login</title>
+      </Helmet>
+      <div className='w-11/12 mx-auto  pt-[250px] lg:pt-0'>
         <Navbar />
       </div>
       <div className="hero bg-base-200 min-h-screen mt-14">
-        <div className="hero-content flex-col ">
-          <div className="text-center ">
+        <div className="hero-content flex-col">
+          <div className="text-center">
             <h1 className="text-5xl font-bold">Login now!</h1>
           </div>
           <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
@@ -51,13 +58,25 @@ const Login = () => {
                 <label className="label">
                   <span className="label-text">Email</span>
                 </label>
-                <input type="email" name='email' placeholder="email" className="input input-bordered" required />
+                <input
+                  type="email"
+                  name='email'
+                  placeholder="email"
+                  className="input input-bordered"
+                  required
+                />
               </div>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
-                <input type="password" name='password' placeholder="password" className="input input-bordered" required />
+                <input
+                  type="password"
+                  name='password'
+                  placeholder="password"
+                  className="input input-bordered"
+                  required
+                />
                 <label className="label">
                   <Link to='/forgetpassword' className="label-text-alt link link-hover">Forgot password?</Link>
                 </label>
@@ -70,7 +89,19 @@ const Login = () => {
           </div>
         </div>
       </div>
-      <Footer></Footer>
+      <Footer />
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </div>
   );
 };
