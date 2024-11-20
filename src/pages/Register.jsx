@@ -8,7 +8,7 @@ import Footer from '../layouts/Footer';
 import { Helmet } from 'react-helmet-async';
 
 const Register = () => {
-    const {handelRegistWemail,setUser}= useContext(AuthContext)
+    const {handelRegistWemail,setUser,updateUserProfile}= useContext(AuthContext)
     const [showPassword,SetShowPassword]=useState(true)
     const navigate = useNavigate();
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
@@ -21,7 +21,8 @@ const Register = () => {
         handelRegistWemail(email,password)
         .then((result)=>{
             setUser(result.user)
-            console.log(result.user);
+            console.log(result);
+            updateUserProfile({displayName:name , photoURL:photo})
             navigate('/')
         })
         .catch((error)=>{
