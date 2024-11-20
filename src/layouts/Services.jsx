@@ -28,11 +28,6 @@ const Services = () => {
               <p className="text-gray-500 mb-2">Category: {servic.category}</p>
               <p className="text-gray-500 mb-2">Counselor: {servic.counselor}</p>
               <p className="text-gray-800 font-bold mb-4">Price: {servic.pricing}</p>
-              {/* <a
-                href={service.learnMoreLink}
-                className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300">
-               
-              </a> */}
               <NavLink to={`/carddetails/${servic.id}`} className='bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300'>
               Learn More
               </NavLink>

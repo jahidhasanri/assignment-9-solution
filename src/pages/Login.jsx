@@ -20,14 +20,14 @@ const Login = () => {
     handelLoginWemail(email, password)
       .then((result) => {
         console.log(result.user);
-        toast.success('Login successful!'); // Success toast
+        toast.success('Login successful!');
         setUser(result.user);
         const from = location.state?.from?.pathname || '/';
         navigate(from, { replace: true });
       })
       .catch((error) => {
         console.log(error);
-        toast.error(`Login failed: ${error.message}`); // Error toast
+        toast.error(`Login failed: ${error.message}`);
       });
 
     console.log(email, password);

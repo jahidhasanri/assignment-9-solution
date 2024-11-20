@@ -14,9 +14,9 @@ const Navbar = () => {
     e.preventDefault();
     handleSingOut()
       .then(() => {
-        setUser(null); // Clear user data after logout
+        setUser(null);
         toast.success('Logout successful!');
-        navigate('/login'); // Redirect to login page
+        navigate('/login'); 
       })
       .catch((error) => {
         console.error(error);
@@ -24,10 +24,10 @@ const Navbar = () => {
       });
   };
 
-  // Add scroll event listener
+  
   useEffect(() => {
     const handleScroll = () => {
-      // Check if the page is scrolled more than 10px
+     
       setIsScrolled(window.scrollY > 10);
     };
 
@@ -71,17 +71,17 @@ const Navbar = () => {
       <div className="text-center mt-4 ml-28 lg:ml-0  lg:mr-[50px]">
         {user ? (
           <div className="relative flex items-center gap-2 group">
-            {/* User Image */}
+           
             <img
               src={user.photoURL || 'https://via.placeholder.com/50'}
               alt="User"
               className="w-12 h-12 rounded-full cursor-pointer"
             />
-            {/* Always show logout button */}
+            
             <button onClick={handleLogout} className="btn btn-active btn-neutral">
               Log out
             </button>
-            {/* Show user name only on hover */}
+          
             <div className="user-name-tooltip hidden group-hover:block absolute bg-white text-black rounded p-2 mt-20">
               <p className="text-sm">{user.displayName || 'User'}</p>
             </div>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from '../layouts/Navbar';
 import { Link, useLoaderData, useParams } from 'react-router-dom';
-import ReactStars from 'react-rating-stars-component'; // Import the rating component
+import ReactStars from 'react-rating-stars-component'; 
 import { Helmet } from 'react-helmet-async';
 
 const CardDetails = () => {
@@ -13,15 +13,13 @@ const CardDetails = () => {
 
   if (!cards) return <div>Product not found</div>;
 
-  // State for managing the comments
   const [comments, setComments] = useState([]);
   const [commentText, setCommentText] = useState("");
 
-  // Handle comment submission
   const handleCommentSubmit = () => {
     if (commentText.trim()) {
-      setComments([...comments, commentText]); // Add new comment to the list
-      setCommentText(""); // Clear the input field after submission
+      setComments([...comments, commentText]); 
+      setCommentText(""); 
     }
   };
 
@@ -46,12 +44,12 @@ const CardDetails = () => {
           
           <div className='flex gap-10 items-center'>
             <ReactStars
-              count={5} // Number of stars
-              value={cards.rating} // Value from your data
-              size={30} // Size of each star
-              isHalf={true} // Allow half-stars if needed
-              edit={false} // Set to false to make it read-only
-              activeColor="#ffd700" // Color of active stars
+              count={5} 
+              value={cards.rating} 
+              size={30} 
+              isHalf={true} 
+              edit={false} 
+              activeColor="#ffd700" 
             />
             <p>{cards.rating} out of 5</p>
           </div>
@@ -60,14 +58,14 @@ const CardDetails = () => {
           
           <p className="text-gray-600 mb-6 text-xl mt-4">Description: <span className='text-neutral'>{cards.description}</span></p>
             <button className='btn btn-secondary'>Appointment</button>
-          {/* Comment/Feedback Section */}
+          
           <div className="mt-10">
             <h3 className="text-2xl font-semibold mb-4">Leave a Comment/Feedback:</h3>
             <textarea
               className="textarea textarea-bordered w-full mb-4"
               placeholder="Enter your comment or feedback"
               value={commentText}
-              onChange={(e) => setCommentText(e.target.value)} // Update state on input change
+              onChange={(e) => setCommentText(e.target.value)} 
             />
             <button
               onClick={handleCommentSubmit}
@@ -76,7 +74,7 @@ const CardDetails = () => {
               Submit Feedback
             </button>
 
-            {/* Displaying the comments */}
+           
             <div className="mt-6">
               <h4 className="text-xl font-semibold mb-4">Submitted Comments:</h4>
               <ul>
