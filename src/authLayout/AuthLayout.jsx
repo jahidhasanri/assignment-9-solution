@@ -8,6 +8,7 @@ const AuthLayout = ({children}) => {
     const name='rifat';
     const [user,setUser]=useState(null)
     const [loader,setLoader]=useState(true)
+    const [appointments, setAppointments] = useState([]);
 
     const handelRegistWemail=(email,password)=>{
         setLoader(true)
@@ -34,9 +35,13 @@ const AuthLayout = ({children}) => {
         return updateProfile(auth.currentUser, updatedData)
     }
 
+    const addAppointment = (appointment) => {
+        setAppointments([...appointments, appointment]);
+    };
+
     
     const userInfo = {
-        name,user,setUser,handelRegistWemail,handelLoginWemail,handleSingOut,loader,updateUserProfile,handelLoginWithGoogle
+        name,user,setUser,handelRegistWemail,handelLoginWemail,handleSingOut,loader,updateUserProfile,handelLoginWithGoogle,addAppointment,appointments
     }
 
     useEffect(() => {

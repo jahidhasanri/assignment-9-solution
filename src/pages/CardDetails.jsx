@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Navbar from '../layouts/Navbar';
 import { Link, useLoaderData, useParams } from 'react-router-dom';
 import ReactStars from 'react-rating-stars-component'; 
 import { Helmet } from 'react-helmet-async';
+import { AuthContext } from '../authLayout/AuthLayout';
 
 const CardDetails = () => {
+  const { addAppointment } = useContext(AuthContext);
   const user = useLoaderData();
   const { id } = useParams();
   const intId = parseInt(id);
@@ -21,6 +23,19 @@ const CardDetails = () => {
       setComments([...comments, commentText]); 
       setCommentText(""); 
     }
+  };
+
+  const handleAppointmentClick = () => {
+    // Add appointment details
+    const newAppointment = {
+      id: Date.now(),
+      serviceName: cards.serviceName,
+      date: cards.duration, // You can change this to a dynamic date
+      time: "5:00 PM - 6:00 PM", // You can change this to a dynamic time
+      counselor: cards.counselor,
+      feedback: "",
+    };
+    addAppointment(newAppointment); // Add to global state
   };
 
   return (
@@ -60,7 +75,7 @@ const CardDetails = () => {
           <p className="text-gray-700 mb-2 text-xl font-medium">Contact Email: {cards.additionalInfo.contactEmail}</p>
           
           <p className="text-gray-600 mb-6 text-xl mt-4">Description: <span className='text-neutral'>{cards.description}</span></p>
-            <button className='btn btn-secondary'>Appointment</button>
+          <button className='btn btn-secondary' onClick={handleAppointmentClick}>Appointment</button>
           
           <div className="mt-10">
             <h3 className="text-2xl font-semibold mb-4">Leave a Comment/Feedback:</h3>
