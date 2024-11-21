@@ -8,9 +8,10 @@ import Footer from '../layouts/Footer';
 import { Helmet } from 'react-helmet-async';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { FcGoogle } from 'react-icons/fc';
 
 const Register = () => {
-  const { handelRegistWemail, setUser, updateUserProfile } = useContext(AuthContext);
+  const { handelRegistWemail, setUser, updateUserProfile ,handelLoginWithGoogle} = useContext(AuthContext);
   const [showPassword, SetShowPassword] = useState(true);
   const navigate = useNavigate();
   const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
@@ -43,12 +44,27 @@ const Register = () => {
       });
   };
 
+  const handleGoogleLogin = () => {
+    handelLoginWithGoogle()
+      .then((result) => {
+        setUser(result.user);
+        toast.success('Login with Google successful!');
+        setTimeout(() => {
+          navigate('/');
+        }, 1000);
+      })
+      .catch((error) => {
+        console.log(error);
+        toast.error(`Google login failed: ${error.message}`);
+      });
+  };
+
   return (
     <div>
       <Helmet>
         <title>Register</title>
       </Helmet>
-      <div className="w-11/12  pt-32 lg:pt-0">
+      <div className="w-11/12  pt-36 lg:pt-0">
         <Navbar />
       </div>
 
@@ -91,7 +107,7 @@ const Register = () => {
                 <button
                   type="button"
                   onClick={() => SetShowPassword(!showPassword)}
-                  className="absolute top-[70px] right-3 text-xl"
+                  className="absolute top-[50px] right-3 text-xl"
                 >
                   {showPassword ? <HiMiniEyeSlash /> : <IoEyeSharp />}
                 </button>
@@ -106,6 +122,12 @@ const Register = () => {
                 </Link>
               </p>
             </form>
+            <div className="form-control mt-4 w-8/12 mx-auto mb-10">
+              <button onClick={handleGoogleLogin} className="btn btn-outline btn-secondary">
+              <FcGoogle/>
+              Login with Google
+              </button>
+            </div>
           </div>
         </div>
       </div>

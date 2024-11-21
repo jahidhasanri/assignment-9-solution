@@ -67,7 +67,7 @@ const Appoinment = () => {
                 ))
             )}
         </div>
-       <div className="w-11/12 ">
+       <div className="w-full ">
        <Footer></Footer>
        </div>
         </div>
