@@ -11,7 +11,7 @@ const MainLayout = () => {
     return (
         <div className='w-full mx-auto'>
             <Helmet>
-                <title>home</title>
+                <title>Career Pathways || Home</title>
             </Helmet>
             <header className='mb-10 pt-2'>
                 <Navbar></Navbar>

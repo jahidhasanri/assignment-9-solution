@@ -57,7 +57,7 @@ const Login = () => {
   return (
     <div>
       <Helmet>
-        <title>Login</title>
+        <title>Career Pathways || Login</title>
       </Helmet>
       <div className='w-11/12 
         pt-[250px] md:pt-[100px] lg:pt-0'>

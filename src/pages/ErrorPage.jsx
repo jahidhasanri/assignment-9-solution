@@ -9,7 +9,7 @@ const ErrorPage = () => {
             <Navbar></Navbar>
         </div>
          <div className='text-center lg:mt-44'>
-            <Helmet><title>error page</title></Helmet>
+            <Helmet><title>Career Pathways || error page</title></Helmet>
             <div className='lg:ml-[400px] mt-7'>
             <img className='' src="https://i.ibb.co.com/PQXhmKJ/404-page-not-found-1024x576.webp" alt="" />
             </div>

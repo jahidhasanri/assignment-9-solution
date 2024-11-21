@@ -25,7 +25,7 @@ const CardDetails = () => {
 
   return (
     <div className='w-11/12  mt-[300px] md:mt-1'>
-      <Helmet><title>card details</title></Helmet>
+      <Helmet><title>Career Pathways || card details</title></Helmet>
       <div className='w-11/12 '>
       <Navbar></Navbar>
 

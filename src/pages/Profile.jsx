@@ -45,7 +45,7 @@ const Profile = () => {
   return (
     <div>
       <Helmet>
-        <title>profile</title>
+        <title>Career Pathways || profile</title>
       </Helmet>
       <div className='w-11/12  pt-36 md:pt-24 lg:pt-0'>
       <Navbar />

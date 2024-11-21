@@ -47,7 +47,7 @@ const ForgetPassword = () => {
 
   return (
     <div>
-      <Helmet><title>forgetpassword</title></Helmet>
+      <Helmet><title>Career Pathways || forget password</title></Helmet>
       <ToastContainer /> 
       <div className='w-11/12 mx-auto'>
         <Navbar></Navbar>
