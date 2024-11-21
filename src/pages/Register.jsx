@@ -64,7 +64,7 @@ const Register = () => {
       <Helmet>
         <title>Career Pathways || Register</title>
       </Helmet>
-      <div className="w-11/12  pt-36 lg:pt-0">
+      <div className="w-11/12  pt-36 xl:pt-0">
         <Navbar />
       </div>
 
@@ -132,7 +132,7 @@ const Register = () => {
         </div>
       </div>
 
-      <div className="w-11/12 ">
+      <div className="w-full ">
         <Footer />
       </div>
 

@@ -8,7 +8,7 @@ import 'swiper/css/pagination';
 const Slider = () => {
     return (
         <Swiper 
-            className='w-[300px] h-[400px] pt-[100px] md:w-11/12  lg:w-[1400px] lg:h-[700px] mx-auto border'
+            className='w-[300px] h-[400px] pt-[100px] md:w-11/12  xl:w-[1400px] lg:h-[700px] mx-auto border'
             modules={[Navigation, Pagination, Scrollbar, A11y]}
             spaceBetween={50}
             slidesPerView={1}

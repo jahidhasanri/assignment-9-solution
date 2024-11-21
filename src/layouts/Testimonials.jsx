@@ -2,7 +2,7 @@ import React from 'react';
 
 const Testimonials = () => {
   return (
-    <div className="container mx-auto text-center py-16">
+    <div className="container mx-auto text-center py-16 md:pr-3 pl-3">
       <h2 className="text-3xl font-semibold text-gray-800 mb-6">What Our Clients Say</h2>
       <p className="text-lg text-gray-600 mb-12">
         Hear directly from those who have benefited from our career counseling services and achieved their goals.

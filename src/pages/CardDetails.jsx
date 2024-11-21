@@ -24,13 +24,13 @@ const CardDetails = () => {
   };
 
   return (
-    <div className='w-11/12  mt-[300px] md:mt-1'>
+    <div className='md:w-11/12  mt-[300px] md:mt-1'>
       <Helmet><title>Career Pathways || card details</title></Helmet>
       <div className='w-11/12 '>
       <Navbar></Navbar>
 
       </div>
-      <div className="card bg-base-100 text-center md:mt-[130px] lg:w-[1000px] shadow-xl lg:mt-52 mx-auto">
+      <div className="card bg-base-100  md:mt-[130px] lg:w-[1000px] shadow-xl lg:mt-52 mx-auto">
         <figure className="px-10 pt-10">
           <img
             src={cards.image}

@@ -7,6 +7,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import auth from '../firebase.config/firebase.config';
 import Navbar from '../layouts/Navbar';
 import { Helmet } from 'react-helmet-async';
+import Footer from '../layouts/Footer';
 
 const ForgetPassword = () => {
   const [email, setEmail] = useState('');
@@ -49,7 +50,7 @@ const ForgetPassword = () => {
     <div>
       <Helmet><title>Career Pathways || forget password</title></Helmet>
       <ToastContainer /> 
-      <div className='w-11/12 mx-auto'>
+      <div className='w-full mx-auto'>
         <Navbar></Navbar>
       </div>
       <div className="hero bg-base-200 min-h-screen">
@@ -81,6 +82,9 @@ const ForgetPassword = () => {
             </form>
           </div>
         </div>
+      </div>
+      <div className='w-full'>
+        <Footer></Footer>
       </div>
     </div>
   );

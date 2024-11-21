@@ -8,7 +8,7 @@ const MeetoutExpert = () => {
       .then((data) => setexperts(data));
   }, []);
   return (
-    <div className="mb-9 bg-slate-200 pb-28">
+    <div className="mb-9 bg-slate-200 pb-28 pl-2 pr-2">
       <h1 className="text-4xl font-extrabold text-center mb-4 pt-4 md:pt-10 lg:pt-32">
       Meet Our Experts
       </h1>
@@ -16,7 +16,7 @@ const MeetoutExpert = () => {
         Our skilled professionals are ready to assist you with their expertise.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:ml-28">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 lg:ml-28">
         {experts.map((expert, index) => (
           <div key={index} className="card bg-base-100 lg:w-96 shadow-xl">
             <figure className="px-10 pt-10">

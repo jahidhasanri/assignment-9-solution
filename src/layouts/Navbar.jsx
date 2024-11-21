@@ -39,7 +39,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`fixed justify-between w-full  items-center mt-1 md:w-full md:mt-0 lg:ml-0 lg:w-11/12 top-0 z-50 md:flex lg:w-full pt-6 pb-10 lg:px-4 transition-colors duration-300 ${
+      className={`fixed justify-between w-full  items-center mt-1 md:w-full md:mt-0 lg:ml-0  top-0 z-50 md:flex  pt-6 pb-10 lg:px-4 transition-colors duration-300 ${
         isScrolled ? 'bg-gray-400 text-white' : 'bg-slate-200'
       }`}
     >
@@ -49,7 +49,7 @@ const Navbar = () => {
           Career Counseling
         </h1>
       </div>
-      <div className="text-center md:ml-[10px] lg:ml-[250px]  lg:flex gap-10">
+      <div className="text-center md:ml-[10px] 2xl:ml-[250px]  xl:flex gap-10">
      
         <div>
           <NavLink to="/" className="text-xl font-semibold">
@@ -67,7 +67,7 @@ const Navbar = () => {
           </NavLink>
         </div>
       </div>
-      <div className="text-center mt-4 ml-[110px] md: mr-4 lg:ml-[350px] lg:mr-0  ">
+      <div className="text-center mt-4 ml-[110px] md: mr-4 2xl:ml-[400px] lg:mr-0  ">
       
         {user && user?.email ? (
           <div
