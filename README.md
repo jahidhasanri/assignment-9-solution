@@ -3,10 +3,7 @@
 This project is a Career Counseling website designed to provide personalized career advice, guidance, and resources to users. It offers a user-friendly platform where individuals can access various counseling services to make informed decisions about their career paths.
 
 ## 🌐 Live Site URL
-[Live Demo](https://your-live-site-url.com)
-
-## 🔗 GitHub Repository
-[GitHub Repository Link](https://github.com/your-username/career-counseling-website)
+[Live Demo](https://fluffy-manatee-71fb16.netlify.app/)
 
 ## 📋 Features
 1. **Authentication System**: Email and password-based registration and login, Google authentication, password validation, and protected routes.
