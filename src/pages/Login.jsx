@@ -44,7 +44,8 @@ const Login = () => {
       <Helmet>
         <title>Login</title>
       </Helmet>
-      <div className='w-11/12 mx-auto  pt-[250px] lg:pt-0'>
+      <div className='w-11/12 
+        pt-[250px] md:pt-[100px] lg:pt-0'>
         <Navbar />
       </div>
       <div className="hero bg-base-200 min-h-screen mt-14">

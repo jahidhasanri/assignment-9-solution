@@ -24,10 +24,13 @@ const CardDetails = () => {
   };
 
   return (
-    <div className='w-11/12 mx-auto'>
+    <div className='w-11/12  mt-[300px] md:mt-1'>
       <Helmet><title>card details</title></Helmet>
+      <div className='w-11/12 '>
       <Navbar></Navbar>
-      <div className="card bg-base-100 w-[1000px] shadow-xl lg:mt-52 mx-auto">
+
+      </div>
+      <div className="card bg-base-100 text-center md:mt-[130px] lg:w-[1000px] shadow-xl lg:mt-52 mx-auto">
         <figure className="px-10 pt-10">
           <img
             src={cards.image}
@@ -36,13 +39,13 @@ const CardDetails = () => {
           />
         </figure>
         <div className="p-10">
-          <h3 className="text-3xl font-bold mb-4">{cards.serviceName}</h3>
+          <h3 className=" text-2xl md:text-3xl font-bold mb-4">{cards.serviceName}</h3>
           <p className="text-gray-700 mb-2 text-xl font-medium">Category: {cards.category}</p>
           <p className="text-gray-700 mb-2 text-xl font-medium">Counselor: {cards.counselor}</p>
           <p className="text-gray-800 font-bold mb-4">Price: {cards.pricing}</p>
           <p className="text-gray-800 font-bold mb-4">Duration: {cards.duration}</p>
           
-          <div className='flex gap-10 items-center'>
+          <div className='flex gap-5 md:gap-10 items-center'>
             <ReactStars
               count={5} 
               value={cards.rating} 

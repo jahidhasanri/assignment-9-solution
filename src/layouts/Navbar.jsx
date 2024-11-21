@@ -39,13 +39,13 @@ const Navbar = () => {
 
   return (
     <div
-      className={`fixed justify-between w-full  items-center mt-1 md:w-full md:mt-0 lg:ml-0 md:w-11/12 top-0 z-50 md:flex  pt-6 pb-10 lg:px-4 transition-colors duration-300 ${
+      className={`fixed justify-between w-full  items-center mt-1 md:w-full md:mt-0 lg:ml-0 lg:w-11/12 top-0 z-50 md:flex lg:w-full pt-6 pb-10 lg:px-4 transition-colors duration-300 ${
         isScrolled ? 'bg-gray-400 text-white' : 'bg-slate-200'
       }`}
     >
       <div className="">
       
-        <h1 className="text-2xl font-bold text-center lg:ml-[50px] lg:font-extrabold lg:text-4xl">
+        <h1 className="text-2xl font-bold text-center md:ml-5 lg:ml-[50px] lg:font-extrabold lg:text-4xl">
           Career Counseling
         </h1>
       </div>
@@ -67,7 +67,7 @@ const Navbar = () => {
           </NavLink>
         </div>
       </div>
-      <div className="text-center mt-4 ml-[110px] lg:ml-[350px]  ">
+      <div className="text-center mt-4 ml-[110px] md: mr-4 lg:ml-[350px] lg:mr-0  ">
       
         {user && user?.email ? (
           <div

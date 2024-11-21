@@ -48,7 +48,7 @@ const Register = () => {
       <Helmet>
         <title>Register</title>
       </Helmet>
-      <div className="w-11/12 mx-auto pt-32 lg:pt-0">
+      <div className="w-11/12  pt-32 lg:pt-0">
         <Navbar />
       </div>
 
@@ -110,7 +110,7 @@ const Register = () => {
         </div>
       </div>
 
-      <div className="w-11/12 mx-auto">
+      <div className="w-11/12 ">
         <Footer />
       </div>
 

@@ -47,7 +47,7 @@ const Profile = () => {
       <Helmet>
         <title>profile</title>
       </Helmet>
-      <div className='w-11/12 mx-auto pt-64 lg:pt-0'>
+      <div className='w-11/12  pt-36 md:pt-24 lg:pt-0'>
       <Navbar />
       </div>
     <div className="min-h-screen bg-base-200 flex items-center justify-center mb-2">
@@ -107,7 +107,7 @@ const Profile = () => {
       </div>
       
     </div>
-    <div className='w-11/12 mx-auto'>
+    <div className='w-11/12 '>
     <Footer></Footer>
       </div>
     </div>
