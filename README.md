@@ -37,18 +37,6 @@ This Career Counseling website is designed to assist users in making informed ca
   - `postcss`: For additional CSS processing
 
 
-### Key Sections:
-- **Main Features**: Lists the key functionalities of the website, such as authentication and service listings.
-- **Main Technologies Used**: Highlights the tools and frameworks used in the project.
-- **Dependencies Used**: Lists the necessary libraries and tools for the project.
-- **Running the Project Locally**: Instructions for setting up the project on your local machine.
-- **Project Summary**: Provides a breakdown of pages and features.
-- **Future Enhancements**: Suggestions for future improvements.
-- **Contact Information**: Includes your email and portfolio link.
-
-Make sure to replace the placeholder links with your actual repository, Firebase configuration, and portfolio URL if needed.
-
-
 ## 🚀 Running the Project Locally
 1. **Clone the repository**:
    ```bash
