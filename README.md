@@ -5,6 +5,8 @@ This project is a Career Counseling website designed to provide personalized car
 ## 🌐 Live Site URL
 [Live Demo](https://fluffy-manatee-71fb16.netlify.app/)
 
+![Screenshot 2025-01-08 153811](https://github.com/user-attachments/assets/ac38166f-174e-4428-979f-28484033dcba)
+
 ## 📋 Features
 1. **Authentication System**: Email and password-based registration and login, Google authentication, password validation, and protected routes.
 2. **Service Listings**: Displays various career counseling services with detailed information fetched from JSON data.
