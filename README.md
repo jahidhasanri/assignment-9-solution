@@ -1,35 +1,43 @@
 # Career Counseling Website
 
-This project is a Career Counseling website designed to provide personalized career advice, guidance, and resources to users. It offers a user-friendly platform where individuals can access various counseling services to make informed decisions about their career paths.
+This Career Counseling website is designed to assist users in making informed career decisions by providing personalized guidance, services, and resources. The platform includes user-friendly features such as authentication, service listings, user profile management, and a feedback system, ensuring a smooth experience for users seeking career advice.
 
-## 🌐 Live Site URL
+## 📸 Screenshot
+![Screenshot](https://github.com/user-attachments/assets/ac38166f-174e-4428-979f-28484033dcba)
+
+## 🌐 Live Demo
 [Live Demo](https://fluffy-manatee-71fb16.netlify.app/)
 
-![Screenshot 2025-01-08 153811](https://github.com/user-attachments/assets/ac38166f-174e-4428-979f-28484033dcba)
+## 📋 Main Features
+1. **Authentication System**: Email/password registration, login, Google authentication, password validation, and protected routes.
+2. **Service Listings**: Displays various career counseling services with detailed information, fetched dynamically.
+3. **Private Routes**: Access to detailed service information is restricted to logged-in users only, with data persistence on reload using Firebase.
+4. **Dynamic Feedback**: Users can leave comments or feedback on services without a page refresh.
+5. **User Profile Management**: Logged-in users can edit and update their profile, including name and photo.
 
-## 📋 Features
-1. **Authentication System**: Email and password-based registration and login, Google authentication, password validation, and protected routes.
-2. **Service Listings**: Displays various career counseling services with detailed information fetched from JSON data.
-3. **Private Routes**: Access to detailed service information is restricted to logged-in users only. User info persists on reload using Firebase authentication.
-4. **Dynamic Feedback**: Users can leave comments/feedback on service pages, viewable without page refresh.
-5. **User Profile Management**: Logged-in users can update their name and photo. Implemented using Firebase’s `updateProfile()` method.
-
-## 📜 Technologies Used
+## 💻 Main Technologies Used
 - **Frontend**: React, React Router, Tailwind CSS, Daisy UI, Swiper Slider
 - **Backend & Authentication**: Firebase
 - **State Management**: React Context API
 - **Notifications**: React-Toastify
 - **API Data Hosting**: imgbb for image hosting
 
-## 📅 Project Summary
-### **Pages & Components**:
-- **Navbar**: Displays user details, login/logout options, and navigation links.
-- **Home Page**:
-  - **Slider**: A three-slide responsive slider implemented using Swiper.
-  - **Services Section**: Lists various services with information like name, category, price, counselor, etc.
-  - **Additional Sections**: Two additional custom sections to enhance user experience.
-- **Service Details Page** (Protected Route): Shows detailed service info, allows users to add comments/feedback.
-- **User Profile Page** (Protected Route): Displays user details with an option to edit and update them.
-- **404 Page**: Custom error page for invalid routes.
-- **Forget Password**: Functional forget password page with redirection to email for reset.
+## 🛠️ Dependencies Used
+- **Core Libraries**:
+  - `firebase`: For authentication and backend services
+  - `swiper`: For creating responsive sliders
+  - `react-toastify`: For displaying notifications
+  - `tailwindcss`, `daisyui`: For styling the components
+  - `react-router-dom`: For handling routing in React
+  - `react-icons`, `react-rating`: For UI elements and rating components
+- **Development Tools**:
+  - `vite`: For bundling and previewing the app
+  - `eslint`: For code linting and maintaining code quality
+  - `daisyui`: For using Tailwind CSS UI components
+  - `postcss`: For additional CSS processing
 
+## 🚀 Running the Project Locally
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-username/career-counseling.git
+   cd career-counseling
